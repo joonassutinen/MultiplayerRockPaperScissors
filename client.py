@@ -190,58 +190,35 @@ Builder.load_string("""
         Button:
             opacity: 0
             id: PaperButton
-            background_color: 1, 1, 1, 0
+            background_color: 0, 0, 0, 1
             size_hint: (.25, .25)
             pos_hint: {'center_x': .25, 'center_y': .25}
             background_normal: ''
             disabled: True
             on_press: root.RockPaperScissorAction("paper", root)
-            Image:
-                source: 'icons8-hand-100.png'
-                y: self.parent.y
-                x: self.parent.x
-                size_hint_y: None
-                size_hint_x: None
-                width: self.parent.width
-                height: self.parent.height
-                allow_stretch: True
+            text: "Paper"
         Button:
             opacity: 0
             id: RockButton
-            background_color: 1, 1, 1, 0
+            background_color: 0, 0, 0, 1
             size_hint: (.25, .25)
             pos_hint: {'center_x': .5, 'center_y': .25}
             background_normal: ''
             disabled: True
             on_press: root.RockPaperScissorAction("rock", root)
-            Image:
-                source: 'icons8-hand-rock-100.png'
-                y: self.parent.y
-                x: self.parent.x
-                size_hint_y: None
-                size_hint_x: None
-                width: self.parent.width
-                height: self.parent.height
-                allow_stretch: True
+            text: "Rock"
 
         Button:
             opacity: 0
             id: ScissorsButton
-            background_color: 1, 1, 1, 0
+            background_color: 0, 0, 0, 1
             size_hint: (.25, .25)
             pos_hint: {'center_x': .75, 'center_y': .25}
             background_normal: ''
             disabled: True
             on_press: root.RockPaperScissorAction("scissors", root)
-            Image:
-                source: 'icons8-hand-scissors-100.png'
-                y: self.parent.y
-                x: self.parent.x
-                size_hint_y: None
-                size_hint_x: None
-                width: self.parent.width
-                height: self.parent.height
-                allow_stretch: True
+            text: "Scissors"
+
 
 
 <ResultsScreen>:
@@ -288,7 +265,7 @@ Builder.load_string("""
             size_hint_y: None
         Label:
             id: WinnerLabel
-            font_size: 24
+            font_size: 16
             text: "Waiting for opponent"
             font_name: "OpenSans-Medium.ttf"
             color: 0, 0, 0, 1
@@ -297,7 +274,7 @@ Builder.load_string("""
             size_hint_y: None
         Label:
             id: YourmoveLabel
-            font_size: 24
+            font_size: 16
             text: "Waiting for opponent"
             font_name: "OpenSans-Medium.ttf"
             color: 0, 0, 0, 1
@@ -306,7 +283,7 @@ Builder.load_string("""
             size_hint_y: None
         Label:
             id: OpponentMoveLabel
-            font_size: 24
+            font_size: 16
             text: "Waiting for opponent"
             font_name: "OpenSans-Medium.ttf"
             color: 0, 0, 0, 1
@@ -315,7 +292,7 @@ Builder.load_string("""
             size_hint_y: None
 
         Button:
-            background_color: 1, 1, 1, 1
+            background_color: 0.5, 0.5, 0.5, 1
             size_hint: (.2, .1)
             pos_hint: {'center_x': .5, 'center_y': .10}
             text: "Exit"
